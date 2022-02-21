@@ -17,6 +17,7 @@ print('Highest grade: {}, {} points'.format(best_student, best))
 
 #finding avg assigment grade
 assignment_averages = []
+# n is iterable for while loop
 n = 0
 while n <= 4:
     current_avg = 0
