@@ -1,4 +1,3 @@
-package IT145project;
 public class Dog extends RescueAnimal {
 
     // Instance variable

@@ -23,8 +23,8 @@ public class ShoppingCartPrinter {
       System.out.println("Enter the item quantity:");
       productQuantity = scnr.nextInt();
       item1.setQuantity(productQuantity);
-      
-      
+
+
       // Get item 2 details from user, create itemToPurchase object
       System.out.println("Item 2");
       System.out.println("Enter the item name:");
@@ -42,7 +42,7 @@ public class ShoppingCartPrinter {
       System.out.println(item2.getName() + " " + item2.getQuantity() + " @ $" + item2.getPrice() + " = $" + item2.getQuantity() * item2.getPrice());
       cartTotal = (item1.getQuantity() * item1.getPrice()) + (item2.getQuantity() * item2.getPrice());
       System.out.println("Total: $" + cartTotal);
-      
+      scnr.close();
       return;
    }
 }

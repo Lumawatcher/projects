@@ -1,4 +1,3 @@
-package IT145project;
 
 import java.lang.String;
 
@@ -21,7 +20,7 @@ public class RescueAnimal {
     public RescueAnimal() {
     }
 
-
+	//accessor and mutator methods
 	public String getName() {
 		return name;
 	}

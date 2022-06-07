@@ -1,4 +1,5 @@
-package IT145project;
+
+import java.util.ArrayList;
 
 public class Monkey extends RescueAnimal{
     // Instance variable
@@ -22,7 +23,7 @@ public class Monkey extends RescueAnimal{
         setReserved(reserved);
         setInServiceCountry(inServiceCountry);
         setTailLength(tail);
-        setMonkeyHeight(height);
+        setHeight(height);
         setBodyLength(body);
 
     }
@@ -36,7 +37,7 @@ public class Monkey extends RescueAnimal{
         return tailLength;
     }
 
-    public String getMonkeyHeight(){
+    public String getHeight(){
         return height;
     }
 
@@ -53,7 +54,7 @@ public class Monkey extends RescueAnimal{
         tailLength = tail;
     }
 
-    public void setMonkeyHeight(String monkeyHeight){
+    public void setHeight(String monkeyHeight){
         height = monkeyHeight;
     }
 
