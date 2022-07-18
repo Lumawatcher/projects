@@ -1,0 +1,1 @@
+C:\Dev\projects\CPP\SpaceInvaders\x64\Debug\SpaceInvaders.exe
