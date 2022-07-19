@@ -17,8 +17,6 @@ using namespace std;
 TODO
 figure out how to detect projectile collision
 figure out how to limit the number of projectiles the player can shoot at once
-
-Create a game clock that moves the invaders every 500 ms but lets the player move every 5. 
 Create a function that fires the player projectile (I may need to move the printer for the spaces between the player and the invaders to this function, from the invader printer function)
 Create a win condition function
 Create a start screen
@@ -168,13 +166,13 @@ void playerPrinter(int spacesRight) {
 void playerMover(char input, int& playerPosition) {
 	switch (input) {
 	case 'a':
-		if (playerPosition > -14) {
-			playerPosition -= 1;
+		if (playerPosition > -20) {
+			playerPosition -= 2;
 		}
 		break;
 	case 'd':
-		if (playerPosition < 14) {
-			playerPosition += 1;
+		if (playerPosition < 20) {
+			playerPosition += 2;
 		}
 		break;
 	case ' ':
@@ -191,17 +189,15 @@ void playerMover(char input, int& playerPosition) {
 
 int main() {
 	initializeInvaders(invaderList);
-	destroyInvader(invaderList.at(6), currentInvaders);
-	destroyInvader(invaderList.at(4), currentInvaders);
-	destroyInvader(invaderList.at(8), currentInvaders);
-	destroyInvader(invaderList.at(22), currentInvaders);
+	int i = 0;
 	while (keepRunning) {
-		int i = 0;
 		invaderPrinter(invaderList, vertposition, horposition);
 		playerPrinter(playerPosition);
 		inputStream(inputChar);
 		playerMover(inputChar, playerPosition);
-		invaderMover(vertposition, horposition, movingRight);
+		if (i % 5 == 0) {
+			invaderMover(vertposition, horposition, movingRight);
+		}
 		sleep_for(100ms);
 		consoleClear();
 		i++;
